@@ -35,7 +35,7 @@ cd foundry-simple-storage
 ## Compile the Sol file:
 * ```forge compile```
 
-## To encrypt private key using CAST:
+## To hide private key using CAST:
 
 * ```cast wallet import <account_name> --interactive```
 * cast tool with '--interactive' allow user to encrypt or to store there private key in the local environment and gave a address to use it while testing the contract.
