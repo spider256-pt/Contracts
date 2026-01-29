@@ -30,23 +30,22 @@ cd foundry-simple-storage
 
 
 ## Install Dependencies:
-* ```forge install```
+```forge install```
 
 ## Compile the Sol file:
-* ```forge compile```
+ ```forge compile```
 
 ## To hide private key using CAST:
-
-* ```cast wallet import <account_name> --interactive```
-* cast tool with '--interactive' allow user to encrypt or to store there private key in the local environment and gave a address to use it while testing the contract.
+```cast wallet import <account_name> --interactive```
+* cast tool with '--interactive' allow user to encrypt or to store their private key in the local environment and gave a address to use it while testing the contract.
 
 
 ## 🔐 Security & Deployment:
 
-* ```forge script script/<script_file> --rpc-url <api_url> --account <account_name> --broadcast -vvvv``` 
+```forge script <script_file> --rpc-url <api_url> --account <account_name> --broadcast -vvvv``` 
 
 ## Anvil:
 
 * It allow to create a block-chain environment locally.
-* ``` anvil ```
+``` anvil ```
 
