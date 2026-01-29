@@ -1,66 +1,52 @@
-## Foundry
+# 📦 Foundry Simple Storage
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A robust implementation of the classic SimpleStorage smart contract, built to master the **Foundry** development framework.
 
-Foundry consists of:
+This project serves as a practical lab for understanding the entire EVM development lifecycle: from local simulation (Anvil) to testnet deployment (Sepolia), with a heavy focus on **DevSecOps** and secure key management.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🚀 Key Features & Learnings
 
-## Documentation
+* **Foundry Implementation:** Replaced Hardhat/Remix workflows with pure Rust-based tooling (`forge`, `cast`, `anvil`).
+* **Secure Deployment:** Implemented **ERC-2335** compliant keystores using `cast wallet` to eliminate the risk of private key leakage via `.env` files.
+* **Local Simulation:** Utilized `anvil` for rapid local testing and state manipulation.
+* **Scripted Deployment:** wrote modular `.s.sol` scripts to automate deployment across different networks (Localhost, Sepolia).
+* **Verification:** Automated contract verification on Etherscan using Foundry's API integration.
 
-https://book.getfoundry.sh/
+## 🛠 Tech Stack
 
-## Usage
+* **Language:** Solidity ^0.8.19
+* **Framework:** Foundry (Forge, Cast, Anvil)
+* **Network:** Sepolia Testnet (via Alchemy)
+* **Security:** ERC-2335 Keystores (Cast Wallet)
 
-### Build
+## ⚡ Getting Started
 
-```shell
-$ forge build
+### 1. Clone the Repository
+```bash
+git clone <YOUR_REPO_URL_HERE>
+cd foundry-simple-storage
 ```
 
-### Test
 
-```shell
-$ forge test
-```
 
-### Format
+## Install Dependencies:
+* ```forge install```
 
-```shell
-$ forge fmt
-```
+## Compile the Sol file:
+* ```forge compile```
 
-### Gas Snapshots
+## To encrypt private key using CAST:
 
-```shell
-$ forge snapshot
-```
+* ```cast wallet import <account_name> --interactive```
+* cast tool with '--interactive' allow user to encrypt or to store there private key in the local environment and gave a address to use it while testing the contract.
 
-### Anvil
 
-```shell
-$ anvil
-```
+## 🔐 Security & Deployment:
 
-### Deploy
+* ```forge script script/<script_file> --rpc-url <api_url> --account <account_name> --broadcast -vvvv``` 
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+## Anvil:
 
-### Cast
+* It allow to create a block-chain environment locally.
+* ``` anvil ```
 
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
